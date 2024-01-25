@@ -1,0 +1,36 @@
+<div class="filename">
+    <h2>{{tableData[0].file.fileName}}</h2> 
+   </div>
+
+   <div class="table-container">
+     <table>
+       <thead>
+         <tr >
+           <th>S.No.</th>
+           <th *ngFor="let coloumn of tableHeader">{{coloumn.header}}</th>
+           <th>Actions</th>
+           
+         </tr>
+       </thead>
+       <tbody>
+        <tr *ngFor="let row of tableData; let idx= index">
+         
+             <td>{{idx +1}}</td>
+             
+             <td *ngFor="let coloumn of tableHeader">{{row[coloumn.field]}}</td>
+
+             <td>
+                 <button class="action-btn" id="edit-btn" type="button" (click)="editFileRecord(row.fileRecordId)">
+                     <i class="bi bi-pencil-square"></i>
+                 </button>
+                 <button class="action-btn" id="delete-btn" type="button" (click)="deleteRecord(row)">
+                     <i class="bi bi-trash3" ></i>
+                 </button>
+             </td>
+         </tr>
+         
+
+         
+       </tbody>
+     </table>
+   </div>

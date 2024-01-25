@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="logo">
+      Maker Checker
+    </div>
+    <ul class="nav-list">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/checker']" [queryParams]="{ userId: userId }">Home</a></li>
+      <li routerLinkActive="active" ><a [routerLink]="['/checker/action']" [queryParams]="{ userId: userId }">Action</a></li>
+   
+    </ul>
+    <div class="profile">
+      <h4>Checker</h4>
+      <button type="button" (click)="logout()">LOGOUT</button>
+    </div>
+    </nav>
+
+  <router-outlet></router-outlet>

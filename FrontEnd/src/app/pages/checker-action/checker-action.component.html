@@ -1,0 +1,30 @@
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+            <th>S.No.</th>
+            <th *ngFor="let coloumn of tableHeader">{{coloumn.header}}</th>
+            <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of tableData; let idx= index">
+            <td>{{idx+1}}</td>
+            <td *ngFor="let coloumn of tableHeader">{{row[coloumn.field]}}</td>
+            
+            
+            <td>
+                <button class="action-btn" id="view-btn" type="button" (click)="viewFile(row)">
+                    <i class="bi bi-eye"></i>
+                </button>
+                <button class="action-btn" id="down-btn" type="button">
+                    <i class="bi bi-file-earmark-arrow-down"></i>
+                </button>
+            </td>
+        </tr>
+       
+        
+      </tbody>
+    </table>
+  </div>

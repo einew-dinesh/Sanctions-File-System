@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="upper">
+      <h1 class="active">LOGIN</h1>
+      <h1 ><a (click)="signup()">SIGNUP</a></h1>
+    </div>
+    <div >
+      <form (submit)="loginUser(f)" #f="ngForm">
+        <div class="input-container">
+
+          <label for="email">Email</label>
+          <input type="text" name="userEmail" id="email" ngModel>
+        </div>
+
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" ngModel>
+            
+        </div>
+
+        <div class="input-container">
+          <input type="submit" value="LOGIN" >
+
+        </div>
+
+      </form>
+    </div>
+  </div>

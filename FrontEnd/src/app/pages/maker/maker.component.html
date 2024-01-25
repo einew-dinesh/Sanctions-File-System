@@ -1,0 +1,64 @@
+<div class="card-container">
+    <div class="card">
+    
+        <div class="container">
+            <h2>Total Uploaded Files</h2>
+            <h3>{{result?.totalUploadedFiles}}</h3>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="container">
+            <h2>Total Uploaded Records</h2>
+            <h3>{{result?.totalUploadedRecords}}</h3>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="container">
+            <h2>Approved Records</h2>
+            <h3>{{result?.totalApprovedRecords}}</h3>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="container">
+            <h2>Rejected Records</h2>
+            <h3>{{result?.totalRejectedRecords}}</h3>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="container">
+            <h2>Pending Records</h2>
+            <h3>{{result?.totalPendingRecords}}</h3>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="container">
+            <h2>Total Unique Records</h2>
+            <h3>{{result?.totalUniqueRecords}}</h3>
+        </div>
+    </div>
+
+</div>
+<div class="card-profile">
+    <div class="container">
+        <h2>Name</h2>
+        <h3>{{user?.userName}}</h3>
+    </div>
+    <div class="container">
+        <h2>Email</h2>
+        <h3>{{user?.userEmail}}</h3>
+    </div>
+    <div class="container">
+        <h2>Account Creation Date</h2>
+        <h3>{{user?.createdOn}}</h3>
+    </div>
+    <div class="container">
+        <h2>Last Logged In</h2>
+        <h3>{{user?.lastLog}}</h3>
+    </div>
+    
+</div>

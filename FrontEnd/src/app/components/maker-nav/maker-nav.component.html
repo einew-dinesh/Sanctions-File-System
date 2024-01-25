@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="logo">
+      Maker Checker
+    </div>
+    <ul class="nav-list">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/maker']" [queryParams]="{ userId: userId }">Home</a></li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/maker/upload" [queryParams]="{ userId: userId }">Upload</a></li>
+      <li routerLinkActive="active" ><a [routerLink]="['/maker/history']" [queryParams]="{ userId: userId }">History</a></li>
+    </ul>
+    <div class="profile">
+      <h4>Maker</h4>
+      <button type="button" (click)="logout()">LOGOUT</button>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>

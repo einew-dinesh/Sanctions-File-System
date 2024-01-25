@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="upper">
+      <h1 ><a (click)="login()">LOGIN</a></h1>
+      <h1 class="active"><a >SIGNUP</a></h1>
+    </div>
+    <div>
+      <form (submit)="signupUser(f)" #f="ngForm">
+        <div class="input-container">
+
+          <label for="email">Email</label>
+          <input type="email" name="userEmail" id="email" ngModel>
+        </div>
+
+        <div class="input-container">
+
+            <label for="uname">Name</label>
+            <input type="text" name="userName" id="uname" ngModel>
+          </div>
+          
+          <div class="input-container">
+
+            <input type="radio" name="userRole" id="maker" value="maker" ngModel>
+            <label for="maker">Maker</label>
+
+            <input type="radio" name="userRole" id="checker" value="checker" ngModel>
+            <label for="checker">Checker</label>
+          </div>
+
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" ngModel>
+            
+        </div>
+        <div class="input-container">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" ngModel>
+              
+          </div>
+
+        <div class="input-container">
+          <input type="submit" value="SIGNUP">
+
+        </div>
+
+      </form>
+    </div>
+  </div>

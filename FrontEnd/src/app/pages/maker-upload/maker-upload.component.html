@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="upper">
+      <h2 >UPLOAD CSV</h2>
+      
+    </div>
+    <div>
+      <form (submit)="uploadFile(f)" #f="ngForm" enctype="multipart/form-data">
+        <div class="input-container">
+
+          <label for="customName">Custom File Name</label>
+          <input type="text" name="FileName" id="customName" ngModel>
+        </div>
+
+        <div class="input-container">
+
+            <label >Type of List</label>
+            <input list="ltype" name="FileType" required ngModel>
+
+            <datalist id="ltype">
+                <option value="Black List"></option>
+                <option value="White List"></option>
+                <option value="Watch List"></option>
+            </datalist>
+          </div>
+          
+          
+
+        <div class="input-container" id="select-file">
+          <label for="file"></label>
+          <input type="file" name="csv" id="file" ngModel (change)="onFileSelected($event)">
+          {{selectedFile.name}}
+            
+        </div>
+        <div class="input-container">
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" rows="4" cols="50" ngModel></textarea>                  
+          </div>
+
+        <div class="input-container">
+          <input type="submit" value="UPLOAD">
+
+        </div>
+
+      </form>
+    </div>
+  </div>
